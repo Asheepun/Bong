@@ -1,7 +1,8 @@
 var express = require("express");
 
 var app = express();
-var server = app.listen(process.env.PORT, "127.0.0.1");
+let port = 3000 || process.env.PORT;
+var server = app.listen(port);
 var users = [];
 
 app.use(express.static("html"));
